@@ -199,7 +199,7 @@ Remove the margin in all browsers.
     width: 48px;
     height: 48px;
     
-     */
+     
    }  
 
 
@@ -234,6 +234,19 @@ Remove the margin in all browsers.
    }
    .toggle-menu__logo {
        margin-bottom: 16px;
+   }
+
+   .toggle-menu__singin {
+       transform: translateX(100vw);
+      
+   }
+   .js-toggle-menu__singin {
+        
+       transform: translateX(0);
+       
+       
+        transition: 550ms ease-in-out;
+        transition-delay: 0.5s;
    }
    .toggle-menu__title {
            font-size: 24px;
@@ -273,6 +286,7 @@ Remove the margin in all browsers.
 }
 .toggle-menu__registratiron-form {
     margin-bottom: 16px;
+     
 }
 .toggle-menu__registration-text {
     font-size: .8125rem;
@@ -289,6 +303,14 @@ Remove the margin in all browsers.
    .search-navigation {
        display: none;
        padding: 2px 14px 2px 0;
+       transform: translateX(100%);
+       transition: 850ms ease-in-out;
+   }
+   .js-search-navigation {
+      
+       transform: translateX(0);
+       
+       transition: 850ms ease-in-out;
    }
    .search-navigation form {
        display:flex;
@@ -325,7 +347,7 @@ Remove the margin in all browsers.
     
 }
 .search-navigation__input:focus {
-    border-color: #0067b8;
+    
     border: 2px solid #0067b8;
     outline: none;
 }
@@ -381,7 +403,10 @@ Remove the margin in all browsers.
    }
 
    .js-open-registr {
+       
        transform: translateX(0);
+       transition: 150ms ease-in-out;
+        
    }
     </style>
 </head>
@@ -532,6 +557,8 @@ Remove the margin in all browsers.
         const inputGet = document.querySelector('.search-navigation');
         const registerContainer = document.querySelector('.toggle-menu__lightbox');
         const singInBtn = document.querySelector('.button-set__toggle-menu');
+        const singInContainer = document.querySelector('.toggle-menu__singin ');
+        const form = document.querySelector('.search-navigation__form')
 
         
         console.log(inputGet)
@@ -542,6 +569,7 @@ Remove the margin in all browsers.
           console.log(event.target);
           mobileMenu.classList.add('is-close');
           inputGet.classList.add('is-open');
+          inputGet.classList.add('js-search-navigation')
           console.log(inputGet);
 
         }
@@ -553,7 +581,8 @@ Remove the margin in all browsers.
     //  console.log(event.target);
      if(event.currentTarget.contains(singInBtn)) {
          console.log(singInBtn);
-         registerContainer.classList.add('js-open-registr')
+         registerContainer.classList.add('js-open-registr');
+         singInContainer.classList.add('js-toggle-menu__singin');
 
      }
  }
