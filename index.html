@@ -75,7 +75,9 @@ Remove the list in all browsers.
             color: inherit;
             cursor: pointer;
         }
-
+        a:focus {
+            outline: none;
+        }
         /**
 Remove the margin in all browsers.
 */
@@ -319,7 +321,9 @@ Remove the margin in all browsers.
             .search-navigation {
                 display: none;
             }
-
+            .button-set__toggle-menu svg {
+                display: inline-block;
+            }
 
             .desktop-version {
                 display: flex;
@@ -674,6 +678,7 @@ width: 32px;
             }
 
             .toggle-menu__title {
+                display: block;
                 font-size: 24px;
                 line-height: 28px;
                 font-weight: 300;
@@ -761,9 +766,9 @@ width: 32px;
                     <ul class="button-set">
 
                         <li><button class="button-set__menu js-open-menu" aria-expanded="false"
-                                aria-controls="mobile-menu">
+                               >
                                 <img class="button-set__menu-icon"
-                                    src="https://img.icons8.com/metro/100/000000/menu.png" height="20px" width="20px"
+                                    src="https://img.icons8.com/metro/100/000000/menu.png" height="20" width="20"
                                     alt="toggle-menu" />
                             </button>
                         </li>
@@ -792,9 +797,9 @@ width: 32px;
 
 
                     <ul class="button-set">
-                        <a class="button-set__shopping-cart">
-                            <svg height='48px' width='48px' fill="#000000" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="5 0 112 100" x="0px" y="0px">
+                        <li><a class="button-set__shopping-cart">
+                            <svg height='48px' width='48px' fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="5 0 112 100" x="0px"
+                                y="0px">
                                 <defs>
                                     <style>
                                         .cls-1 {
@@ -806,10 +811,9 @@ width: 32px;
                                     d="M41.3,56l.58,3H63a4,4,0,1,1-4,4,4,4,0,0,1,.55-2H43.44A4,4,0,0,1,44,63a4,4,0,1,1-4.16-4L35.18,35H32V33h5l1,6,30,1L64,56ZM63,65a2,2,0,1,0-2-2A2,2,0,0,0,63,65ZM38,63a2,2,0,1,0,2-2A2,2,0,0,0,38,63Zm.39-22,2.53,13H62.36l3.2-12.11Z">
                                 </path>
                             </svg>
-                        </a>
-
-                        <a class="button-set__toggle-menu" href="">
-
+                        </a></li>
+                        <li><a class="button-set__toggle-menu">
+                        
                             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' stroke='#707070'>
                                 <g class='mectrl_stroke' stroke-width='1.9' fill='none'>
                                     <circle cx='32' cy='32' r='30.25' />
@@ -819,9 +823,12 @@ width: 32px;
                                     </g>
                                 </g>
                             </svg>
-
+                        
                         </a>
+</li>
+                       
 
+                       
                     </ul>
                 </div>
 
@@ -881,7 +888,7 @@ width: 32px;
                     src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
                     alt="logo">
             </a></li>
-        <li class="model-type__item"><a class="model-type__surface" href="http://"><span class="menu__accent">Surface</span>
+        <li class="model-type__item"><a class="model-type__surface" ><span class="menu__accent">Surface</span>
                 
             </a></li>
     </ul>
@@ -889,14 +896,14 @@ width: 32px;
     
     <!-- navigation menu this page-->
     <ul class="menu">
-        <li class="menu__item"> <a class="menu__link" href="http://"><span class="menu__accent">Computers</span></a>
+        <li class="menu__item"> <a class="menu__link" ><span class="menu__accent">Computers</span></a>
         
         </li>
-        <li class="menu__item"> <a class="menu__link" href="http://"><span class="menu__accent">Computers for
+        <li class="menu__item"> <a class="menu__link" ><span class="menu__accent">Computers for
                     Business</span> </a></li>
-        <li class="menu__item"> <a class="menu__link" href="http://"><span class="menu__accent">Accessories</span></a></li>
-        <li class="menu__item"> <a class="menu__link" href="http://"><span class="menu__accent">Shop now</span></a></li>
-        <li class="menu__item"> <a class="menu__link no-decoration" href="http://"><span
+        <li class="menu__item"> <a class="menu__link" ><span class="menu__accent">Accessories</span></a></li>
+        <li class="menu__item"> <a class="menu__link" ><span class="menu__accent">Shop now</span></a></li>
+        <li class="menu__item"> <a class="menu__link no-decoration" ><span
                     class="menu__accent">Support</span></a></li>
     
     </ul>
@@ -909,7 +916,7 @@ width: 32px;
 
 <ul class="button-set">
 
-    <li class="button-set__list-item"><a class="button-set__menu-list" href="http://"><span class="menu__accent">All Microsoft</span>
+    <li class="button-set__list-item"><a class="button-set__menu-list" ><span class="menu__accent">All Microsoft</span>
   
     </a>
     </li>
@@ -926,10 +933,10 @@ width: 32px;
         </button>
     </li>
 
-    <li class="button-set__shopping-cart-item" href="http://">
+    <li class="button-set__shopping-cart-item">
         <a class="button-set__shopping-cart">
             <span class="button-set__cart-desctipton menu__accent">Cart</span>
-            <svg height='48px' width='48px' fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="5 0 112 100" x="0px"
+            <svg height='48' width='48' fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="5 0 112 100" x="0px"
         y="0px">
         <defs>
             <style>
@@ -948,7 +955,7 @@ width: 32px;
     <li class="button-set__toggle-menu-item">
         <a class="button-set__toggle-menu js-button-set__toggle-pc">
 <span class="button-set__toggle-description">Sign in</span>
-              <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' stroke='#707070'>
+              <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' stroke='#707070' width="32" height="32">
                  <g class='mectrl_stroke' stroke-width='1.9' fill='none'>
                  <circle cx='32' cy='32' r='30.25' />
                  <g transform='matrix(1.1 0 0 1.1 8.8 5.61)'>
@@ -1014,19 +1021,19 @@ width: 32px;
 
 <!-- section with logo -->
 
-<section class="toggle-menu__logo">
+<div class="toggle-menu__logo">
     <a class="toggle-menu__logo-link" href="./index.html">
         <img class="logo__img"
             src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
             alt="logo" width="108" height="24">
     </a>
-</section>
+</div>
 
 <!-- section with registration form -->
-<section class="toggle-menu__singin">
+<div class="toggle-menu__singin">
     <form class="toggle-menu__registratiron-form">
         <label for="login">
-            <p class="toggle-menu__title">Sign in</p>
+            <span class="toggle-menu__title">Sign in</span>
         </label>
         <input class="toggle-menu__input" type="email" name="login" maxlength="113" id="login"
             placeholder="Email, phone, or Skype">
@@ -1035,8 +1042,8 @@ width: 32px;
 
     <p class="toggle-menu__registration-text">No account? <a class="toggle-menu__registratiron-link" href="">Create
             one!</a></p>
-</section>
-<section class="toggle-menu__option"></section>
+    </div>
+<div class="toggle-menu__option"></div>
 
 
 
